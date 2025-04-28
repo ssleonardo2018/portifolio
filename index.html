@@ -1,122 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Estudante de Engenharia de Software</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #fff;
-        }
-        header {
-            background-color: #1f1f1f;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-        .section {
-            padding: 40px;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: #e0e0e0;
-        }
-        .projects, .skills {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .project, .skill {
-            background-color: #2c2c2c;
-            border-radius: 10px;
-            padding: 20px;
-            width: 250px;
-            text-align: center;
-        }
-        .project h3, .skill h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        footer {
-            background-color: #1f1f1f;
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
-        }
-        .contact a {
-            color: #00bcd4;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio - [Seu Nome]</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome para ícones -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Portfólio de Leonardo S Silva</h1>
-        <p>Estudante de Engenharia de Software</p>
-    </header>
 
-    <div class="section">
-        <h2>Sobre Mim</h2>
-        <p>Sou estudante de Engenharia de Software com foco em desenvolvimento web e soluções tecnológicas inovadoras. Estou sempre em busca de aprender novas tecnologias e aprimorar minhas habilidades.</p>
+<header>
+  <div class="logo">
+    <img src="images/user.jpg" alt="Sua Foto">
+    <div class="logo-text">
+      <h1>Leonardo S Silva</h1>
+      <span>Estudante de Engenharia de Software</span>
     </div>
+  </div>
 
-    <div class="section">
-        <h2>Projetos</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>NUTRIAÇÃO</h3>
-                <p>Aplicação web desenvolvida para promover o cuidado com a saúde alimentar de forma personalizada e tecnológica. Ferramentas utilizadas: HTML, CSS, JavaScript.</p>
-                <a href="https://ssleonardo2018.github.io/nutriacao/">Clique aqui para acessar o projeto</a>
-            </div>
-            <div class="project">
-                <h3>ROTA</h3>
-                <p>Descrição breve do projeto. Ferramentas utilizadas: Python, Django, MySQL.</p>
-                <a href="https://ssleonardo2018.github.io/rota/">Clique aqui para acessar o projeto</a>
-            </div>
-            <div class="project">
-                <h3>JOGO - CÉLULA EM AÇÃO</h3>
-                <p>Descrição breve do projeto. Ferramentas utilizadas: React, Node.js, MongoDB.</p>
-                <a href="https://ssleonardo2018.github.io/celulasemacao/">Clique aqui para acessar o projeto</a>
-            </div>
-        </div>
+  <nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    <ul id="menu">
+      <li><a href="#cursos"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="#experiencia"><i class="fas fa-briefcase"></i> Experiência</a></li>
+      <li><a href="#projetos"><i class="fas fa-code"></i> Projetos</a></li>
+      <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="section">
-        <h2>Habilidades</h2>
-        <div class="skills">
-            <div class="skill">
-                <h3>Desenvolvimento Web</h3>
-                <p>HTML, CSS, JavaScript, React</p>
-            </div>
-            <div class="skill">
-                <h3>Backend</h3>
-                <p>Python, Django, Node.js</p>
-            </div>
-            <div class="skill">
-                <h3>Banco de Dados</h3>
-                <p>MySQL, MongoDB</p>
-            </div>
-        </div>
+<section class="hero">
+  <h2>Bem-vindo ao meu Portfólio!</h2>
+  <p>Explore meus projetos, cursos e experiências no mundo da tecnologia.</p>
+</section>
+
+<section id="cursos">
+  <h2>Cursos Concluídos</h2>
+  <div class="courses">
+    <div class="course">
+      <h3>Desenvolvimento Web Full Stack</h3>
+      <p>HTML, CSS, JavaScript, React, Node.js, MongoDB.</p>
     </div>
-
-    <div class="section contact">
-        <h2>Contato</h2>
-        <p>Você pode me encontrar nas redes sociais ou me enviar um e-mail para <a href="mailto:ssleonardo@gmail.com">ssleonardo2018@gmail.com</a>.</p>
+    <div class="course">
+      <h3>Python para Data Science</h3>
+      <p>Python, Pandas, Numpy, Matplotlib, Machine Learning básico.</p>
     </div>
+    <div class="course">
+      <h3>Banco de Dados SQL Avançado</h3>
+      <p>MySQL, Procedures, Triggers, Modelagem de Dados.</p>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Leonardo S Silva. Todos os direitos reservados.</p>
-    </footer>
+<section id="experiencia">
+  <h2>Minhas Experiências</h2>
+  <div class="experience">
+    <div class="exp">
+      <h3>Projeto Freelancer - Plataforma E-commerce</h3>
+      <p>Desenvolvimento de uma loja virtual completa usando React e Node.js, com sistema de login, carrinho de compras e pagamentos online.</p>
+    </div>
+    <div class="exp">
+      <h3>Assistente de Desenvolvimento - Startup Tech</h3>
+      <p>Atuação em projetos de aplicativos móveis, utilizando metodologias ágeis (Scrum) e integração de APIs REST.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <h2>Meus Projetos</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>NUTRIAÇÃO</h3>
+      <p>Aplicação web desenvolvida para promover o cuidado com a saúde alimentar de forma personalizada e tecnológica usando HTML, CSS e JavaScript moderno.</p>
+      <a href="https://ssleonardo2018.github.io/nutriacao/" target="_blank">Ver Projeto</a>
+    </div>
+    <div class="project">
+      <h3>ROTA</h3>
+      <p>Aplicação web desenvolvida para gestão de km diário e abastecimento para motorista usando HTML, CSS e JavaScript moderno<!--feito com React Native para Android e iOS-->.</p>
+      <a href="https://ssleonardo2018.github.io/rota/" target="_blank">Ver Projeto</a>
+    </div>
+    <div class="project">
+      <h3>CÉLULA EM AÇÃO</h3>
+      <p>Jogo desenvolvido para turma de Odontoligia apresentar em trabalho em grupo usando HTML, CSS e JavaScript moderno.</p>
+      <a href="https://ssleonardo2018.github.io/celulasemacao/" target="_blank">Ver Projeto</a>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p style="text-align: center;">
+    <a href="mailto:seuemail@example.com"><i class="fas fa-envelope"></i> seuemail@example.com</a>
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 [Seu Nome] - Todos os direitos reservados.
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  // Animações ao rolar
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.hero h2, .hero p, .course, .exp, .project').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
 </body>
 </html>

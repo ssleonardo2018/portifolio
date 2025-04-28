@@ -1,0 +1,254 @@
+:root {
+  --preto: #0d0d0d;
+  --laranja: #ff5722;
+  --verde: #4caf50;
+  --amarelo: #ffeb3b;
+  --texto-claro: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid var(--laranja);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text h1 {
+  font-size: 20px;
+  color: var(--laranja);
+}
+
+.logo-text span {
+  font-size: 12px;
+  color: var(--verde);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--laranja);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: var(--texto-claro);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('images/fundo.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+.hero h2 {
+  font-size: 40px;
+  color: var(--amarelo);
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s ease-in-out;
+  background-color: #0d0d0d;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--verde);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s ease-in-out;
+  background-color: #0d0d0d;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Seções */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 32px;
+  color: var(--laranja);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.courses, .experience, .projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course, .exp, .project {
+  background: #1a1a1a;
+  border-left: 5px solid var(--verde);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s, background 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.course:hover, .exp:hover, .project:hover {
+  transform: scale(1.05);
+  background: #262626;
+}
+
+.course h3, .exp h3, .project h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--amarelo);
+}
+
+.course p, .exp p, .project p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--laranja);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Contato */
+#contato p a {
+  color: var(--laranja);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #111;
+  color: #777;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
